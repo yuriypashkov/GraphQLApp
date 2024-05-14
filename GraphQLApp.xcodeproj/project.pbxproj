@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,13 @@
 		213A46782BF38BE9008CAE19 /* NewsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213A46772BF38BE9008CAE19 /* NewsItem.swift */; };
 		213A467D2BF38EA0008CAE19 /* NewsItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213A467C2BF38EA0008CAE19 /* NewsItemView.swift */; };
 		213A467F2BF38EE5008CAE19 /* NewsItemRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213A467E2BF38EE5008CAE19 /* NewsItemRow.swift */; };
+		213A46812BF39281008CAE19 /* ApolloWebSocket in Frameworks */ = {isa = PBXBuildFile; productRef = 213A46802BF39281008CAE19 /* ApolloWebSocket */; };
+		213A46842BF3967D008CAE19 /* schema.graphqls in Resources */ = {isa = PBXBuildFile; fileRef = 213A46822BF3967D008CAE19 /* schema.graphqls */; };
+		213A46862BF396B6008CAE19 /* GetArticles.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 213A46852BF396B6008CAE19 /* GetArticles.graphql */; };
+		213A46892BF39850008CAE19 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213A46882BF39850008CAE19 /* Network.swift */; };
+		213A468B2BF399EE008CAE19 /* ApolloAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 213A468A2BF399EE008CAE19 /* ApolloAPI */; };
+		21EA03222BF39C8600954BB7 /* API in Frameworks */ = {isa = PBXBuildFile; productRef = 21EA03212BF39C8600954BB7 /* API */; };
+		21EA03242BF39D9B00954BB7 /* NewsItem+Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EA03232BF39D9B00954BB7 /* NewsItem+Article.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +37,10 @@
 		213A46772BF38BE9008CAE19 /* NewsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsItem.swift; sourceTree = "<group>"; };
 		213A467C2BF38EA0008CAE19 /* NewsItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsItemView.swift; sourceTree = "<group>"; };
 		213A467E2BF38EE5008CAE19 /* NewsItemRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsItemRow.swift; sourceTree = "<group>"; };
+		213A46822BF3967D008CAE19 /* schema.graphqls */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = schema.graphqls; sourceTree = "<group>"; };
+		213A46852BF396B6008CAE19 /* GetArticles.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = GetArticles.graphql; sourceTree = "<group>"; };
+		213A46882BF39850008CAE19 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		21EA03232BF39D9B00954BB7 /* NewsItem+Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewsItem+Article.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,7 +48,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				213A468B2BF399EE008CAE19 /* ApolloAPI in Frameworks */,
+				21EA03222BF39C8600954BB7 /* API in Frameworks */,
 				213A46722BF38AAF008CAE19 /* Apollo in Frameworks */,
+				213A46812BF39281008CAE19 /* ApolloWebSocket in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +77,8 @@
 		213A46612BF389C8008CAE19 /* GraphQLApp */ = {
 			isa = PBXGroup;
 			children = (
+				213A46872BF39844008CAE19 /* Network */,
+				213A46832BF3967D008CAE19 /* graphql */,
 				213A46622BF389C8008CAE19 /* GraphQLAppApp.swift */,
 				213A46792BF38E26008CAE19 /* View */,
 				213A467A2BF38E31008CAE19 /* Model */,
@@ -104,8 +120,26 @@
 			isa = PBXGroup;
 			children = (
 				213A46752BF38B63008CAE19 /* String+Date.swift */,
+				21EA03232BF39D9B00954BB7 /* NewsItem+Article.swift */,
 			);
 			path = SupportFiles;
+			sourceTree = "<group>";
+		};
+		213A46832BF3967D008CAE19 /* graphql */ = {
+			isa = PBXGroup;
+			children = (
+				213A46822BF3967D008CAE19 /* schema.graphqls */,
+				213A46852BF396B6008CAE19 /* GetArticles.graphql */,
+			);
+			path = graphql;
+			sourceTree = "<group>";
+		};
+		213A46872BF39844008CAE19 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				213A46882BF39850008CAE19 /* Network.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +160,9 @@
 			name = GraphQLApp;
 			packageProductDependencies = (
 				213A46712BF38AAF008CAE19 /* Apollo */,
+				213A46802BF39281008CAE19 /* ApolloWebSocket */,
+				213A468A2BF399EE008CAE19 /* ApolloAPI */,
+				21EA03212BF39C8600954BB7 /* API */,
 			);
 			productName = GraphQLApp;
 			productReference = 213A465F2BF389C8008CAE19 /* GraphQLApp.app */;
@@ -157,6 +194,7 @@
 			mainGroup = 213A46562BF389C8008CAE19;
 			packageReferences = (
 				213A46702BF38AAF008CAE19 /* XCRemoteSwiftPackageReference "apollo-ios" */,
+				21EA03202BF39C8600954BB7 /* XCLocalSwiftPackageReference "API" */,
 			);
 			productRefGroup = 213A46602BF389C8008CAE19 /* Products */;
 			projectDirPath = "";
@@ -173,7 +211,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				213A466A2BF389CA008CAE19 /* Preview Assets.xcassets in Resources */,
+				213A46842BF3967D008CAE19 /* schema.graphqls in Resources */,
 				213A46672BF389CA008CAE19 /* Assets.xcassets in Resources */,
+				213A46862BF396B6008CAE19 /* GetArticles.graphql in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,8 +224,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21EA03242BF39D9B00954BB7 /* NewsItem+Article.swift in Sources */,
 				213A46762BF38B63008CAE19 /* String+Date.swift in Sources */,
 				213A467F2BF38EE5008CAE19 /* NewsItemRow.swift in Sources */,
+				213A46892BF39850008CAE19 /* Network.swift in Sources */,
 				213A46782BF38BE9008CAE19 /* NewsItem.swift in Sources */,
 				213A467D2BF38EA0008CAE19 /* NewsItemView.swift in Sources */,
 				213A46742BF38B16008CAE19 /* NewsListModel.swift in Sources */,
@@ -407,6 +449,13 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCLocalSwiftPackageReference section */
+		21EA03202BF39C8600954BB7 /* XCLocalSwiftPackageReference "API" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = API;
+		};
+/* End XCLocalSwiftPackageReference section */
+
 /* Begin XCRemoteSwiftPackageReference section */
 		213A46702BF38AAF008CAE19 /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
@@ -423,6 +472,20 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 213A46702BF38AAF008CAE19 /* XCRemoteSwiftPackageReference "apollo-ios" */;
 			productName = Apollo;
+		};
+		213A46802BF39281008CAE19 /* ApolloWebSocket */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 213A46702BF38AAF008CAE19 /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = ApolloWebSocket;
+		};
+		213A468A2BF399EE008CAE19 /* ApolloAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 213A46702BF38AAF008CAE19 /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = ApolloAPI;
+		};
+		21EA03212BF39C8600954BB7 /* API */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = API;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

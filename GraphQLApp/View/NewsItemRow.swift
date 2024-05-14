@@ -12,7 +12,7 @@ struct NewsItemRow: View {
     @State var item: NewsItem
     
     var body: some View {
-        VStack {
+        VStack(alignment: .leading, spacing: 4) {
             Text(item.title ?? "none value")
                 .font(.system(size: 16, weight: .bold))
             Text(item.publishedAt ?? "none value")

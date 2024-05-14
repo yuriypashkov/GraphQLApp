@@ -23,8 +23,11 @@ struct NewsItemView: View {
                 .clipShape(.rect(cornerRadius: 24))
                 
                 Text(item.title ?? "")
+                    .font(.system(size: 16, weight: .bold))
                 
                 Text(item.publishedAt ?? "")
+                    .font(.system(size: 12, weight: .medium))
+                    .foregroundStyle(.gray)
                 
                 Text(item.content ?? "")
                 
@@ -37,7 +40,7 @@ struct NewsItemView: View {
                 })
                 
                 Spacer()
-            }
+            }.padding()
         }
     }
 }
